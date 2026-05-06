@@ -1,0 +1,68 @@
+ /* Custom styling beyond Tailwind utility classes */
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     background-color: #0f172a;
+     color: #f1f5f9;
+ }
+
+ /* Hide scrollbar for cleaner look */
+ ::-webkit-scrollbar {
+     width: 8px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: #0f172a;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: #1e293b;
+     border-radius: 4px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: #38bdf8;
+ }
+
+ /* Glassmorphism nav */
+ nav {
+     background: rgba(15, 23, 42, 0.7);
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+ }
+
+ /* Blob Animations for Hero */
+ @keyframes blob {
+     0% {
+         transform: translate(0px, 0px) scale(1);
+     }
+
+     33% {
+         transform: translate(30px, -50px) scale(1.1);
+     }
+
+     66% {
+         transform: translate(-20px, 20px) scale(0.9);
+     }
+
+     100% {
+         transform: translate(0px, 0px) scale(1);
+     }
+ }
+
+ .animate-blob {
+     animation: blob 7s infinite;
+ }
+
+ .animation-delay-2000 {
+     animation-delay: 2s;
+ }
+
+ /* Ensure 3D Container handles events correctly */
+ #showcase-3d-model canvas {
+     outline: none;
+ }
